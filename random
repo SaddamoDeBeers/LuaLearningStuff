@@ -1,0 +1,17 @@
+-- bla bla bla
+
+local os = require("os")
+local term = require("term")
+local component = require("component")
+local gpu = component.gpu
+local event = require("event")
+
+local w,h = gpu.getResolution()
+
+
+
+while true do --runs forever
+  term.clear() --clears the screen
+  print(os.date("Current time is: %X%p")) --prints the current ingame time.
+  os.sleep(1) --makes the program wait for a second
+end
