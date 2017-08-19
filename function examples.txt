@@ -1,0 +1,23 @@
+
+
+---
+
+local function status()
+  if EUOutput() == 0 then --calling function to get current value
+  return "offline" --had to be strings, also changed function to return values insteat of setting global variables
+  else
+  return "online "
+  end
+end --forgot end
+
+---
+
+local function centerF(row, msg, ...)
+  local mLen = string.len(msg)
+  w, h = gpu.getResolution()
+  term.setCursor((w - mLen)/2,row)
+  print(msg:format(...))
+end
+
+---
+
