@@ -21,3 +21,39 @@ end
 
 ---
 
+local function status()
+  if EUOutput == 0 then 
+  return "offline" 
+  else
+  return "online "
+  end
+end
+
+---
+
+local function maxheat()
+  return reactor.getMaxHeat()
+  end
+  
+---
+
+local function getheat()
+  if getHeat == 0 then
+  return "0   "
+  else
+  return reactor.getHeat()
+  end
+end
+
+---
+
+local function getEU()
+  if EUOutput == 0 then
+  return "0   "
+  else
+  return reactor.getReactorEUOutput()
+  end
+end
+
+---
+
